@@ -1,0 +1,56 @@
+      import java.util.*;
+public class Main{
+	public static void main(String[] args) {
+	    Scanner obj=new Scanner(System.in);
+	    int amt=0,d;
+	    System.out.println("......welcome to the pizza store......");
+	     for(d=0;d<2;d++){
+		System.out.println("what size 0f pizza do you prefer ?");
+		System.out.println("s-100"+"  "+"m-150"+"  "+"l-200");
+    	do{
+		String o=obj.next();
+       switch(o){
+           case "s":
+               amt=amt+100;
+	    break;
+	    case "m":
+               amt=amt+150;
+	    break;
+	    case "l":
+               amt=amt+200;
+	    break;
+	    default:
+	    System.out.println("[invalid]enter the correct size :");
+	    continue; 
+       }}while(amt==0);
+         System.out.println("your total bill amount:"+amt);
+        System.out.println("Do you want extra pepperoni ?.."+"[yes/no]");
+        System.out.println("cost:s-20"+ " "+"m-20"+" "+"l-20");
+        String n=obj.next();
+        if(n.length()==3){
+        amt=amt+20;}
+        System.out.println("your total bill amount:"+amt);
+        System.out.println("Do you want extra cheese  ?.."+"[yes/no]");
+        System.out.println("cost:s-20"+" "+"m-30"+" "+"l-50");
+        String z=obj.next();
+        if(z.length()==3){
+            if(amt<=120){
+                amt=amt+20;
+            }
+            else if(amt==150||amt<=170){
+             amt=amt+30;
+            }
+            else
+            {
+            amt=amt+50;
+            }}
+        System.out.println("your total bill amount:"+amt);
+        System.out.println("Do you want next order ?.."+"[yes/no]");
+       String s=obj.next();
+       if(s.length()==3){
+           System.out.println("for SAME BILL enter 1");
+           System.out.println("for DIFFERENT BILL enter 2");
+           int f=obj.nextInt();
+         f=d;}
+      System.out.println("THANK YOU!....");}
+	    }}
